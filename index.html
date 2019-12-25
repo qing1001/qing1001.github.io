@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正方体</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .outer{
+            width: 1000px;
+            margin: 10px auto;
+            /*background-color: #cecece;*/
+            height: 430px;
+            position: relative;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            transform-style: preserve-3d;
+            /*perspective: 300px;*/
+            transform: rotateY(30deg) rotateX(30deg);
+            animation:move 3s linear infinite;
+        }
+        .box1 li{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all 1s linear;
+        }
+        .box1 li:nth-child(1){
+            background-color: rgba(23,78,156,.5);
+            transform: translateZ(50px);
+        }
+        .box1 li:nth-child(2){
+            background-color: rgba(166, 234, 132, 0.5);
+            transform: rotateX(180deg) translateZ(50px);
+        }
+        .box1 li:nth-child(3){
+            background-color: rgba(156, 47, 74, 0.5);
+            transform: rotateY(90deg) translateZ(50px);
+        }
+        .box1 li:nth-child(4){
+            background-color: rgba(83, 5, 156, 0.5);
+            transform: rotateY(-90deg) translateZ(50px);
+        }
+        .box1 li:nth-child(5){
+            background-color: rgba(234, 138, 206, 0.5);
+            transform: rotateX(90deg) translateZ(50px);
+        }
+        .box1 li:nth-child(6){
+            background-color: rgba(100, 99, 234, 0.58);
+            transform: rotateX(-90deg) translateZ(50px);
+        }
+
+        /*大的正方体*/
+        .box2{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            transform-style: preserve-3d;
+            /*perspective: 300px;*/
+            transform: rotateY(45deg) rotateX(45deg);
+            animation:move 3s linear infinite;
+        }
+        .box2 li{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all 1s linear;
+        }
+        .box2 li:nth-child(1){
+            background-color: rgba(255, 47, 46, 0.5);
+            transform: translateZ(100px);
+        }
+
+        .box2:hover li:nth-child(1){
+            transform: translateZ(200px);
+        }
+
+        .box2 li:nth-child(2){
+            background-color: rgba(234, 40, 108, 0.53);
+            transform: rotateX(180deg) translateZ(100px);
+        }
+        .box2:hover li:nth-child(2){
+            transform: rotateX(180deg) translateZ(200px);
+        }
+
+        .box2 li:nth-child(3){
+            background-color: rgba(228, 139, 234, 0.5);
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .box2:hover li:nth-child(3){
+            transform: rotateY(90deg) translateZ(200px);
+        }
+
+        .box2 li:nth-child(4){
+            background-color: rgba(83, 5, 156, 0.5);
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        .box2:hover li:nth-child(4){
+            transform: rotateY(-90deg) translateZ(200px);
+        }
+
+        .box2 li:nth-child(5){
+            background-color: rgba(234, 138, 206, 0.5);
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .box2:hover li:nth-child(5){
+            transform: rotateX(90deg) translateZ(200px);
+        }
+
+        .box2 li:nth-child(6){
+            background-color: rgba(100, 99, 234, 0.58);
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        .box2:hover li:nth-child(6){
+            transform: rotateX(-90deg) translateZ(200px);
+        }
+        @keyframes  move{
+            from{
+                transform:rotateY(0deg) rotateX(0deg);
+            }
+            to{
+                transform: rotateY(360deg) rotateX(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <ul class="box1">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ul class="box2">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+</body>
+</html>
