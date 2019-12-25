@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>太极图</title>
+    <style>
+        .outer{
+            width: 500px;
+            height: 500px;
+            margin: 100px auto;
+            background-color: #d4d4d4;
+            position: relative;
+        }
+        .inner{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin:auto;
+
+            animation: move 2s linear infinite;
+
+        }
+        .left{
+            width: 200px;
+            height: 400px;
+            float: left;
+            background-color: #000;
+            border-radius: 200px 0 0 200px;
+            position: relative;
+        }
+        .right{
+            width: 200px;
+            height: 400px;
+            float: left;
+            background-color: white;
+            border-radius: 0 200px 200px 0;
+            position: relative;
+        }
+        .left-top{
+            background-color: #000;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            right: -100px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .right-bottom{
+            background-color: #fff;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            bottom: 0;
+            left: -100px;
+            border-radius: 50%;
+        }
+        .left-inner{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin:auto;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+        .right-inner{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin:auto;
+            background-color: #000;
+            border-radius: 50%;
+        }
+        @keyframes move {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <div class="left">
+                <div class="left-top">
+                    <div class="left-inner"></div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="right-bottom">
+                    <div class="right-inner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
